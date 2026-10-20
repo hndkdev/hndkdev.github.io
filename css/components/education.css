@@ -1,0 +1,42 @@
+/* ===================================
+   EDUCATION SECTION
+   =================================== */
+.education__content {
+  max-width: 700px;
+}
+
+.education__item {
+  position: relative;
+  padding-left: var(--space-8);
+  border-left: 2px solid var(--color-border);
+}
+
+.education__item::before {
+  content: '';
+  position: absolute;
+  left: -5px;
+  top: 6px;
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-accent);
+  border-radius: 50%;
+}
+
+.education__degree {
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  color: var(--color-primary);
+  margin-bottom: var(--space-1);
+}
+
+.education__school {
+  font-size: var(--text-base);
+  font-weight: var(--font-medium);
+  color: var(--color-text);
+  margin-bottom: var(--space-1);
+}
+
+.education__year {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}

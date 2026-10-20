@@ -1,0 +1,250 @@
+/* ===================================
+   NAVBAR - CLEAN & CONSISTENT
+   =================================== */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--navbar-height);
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-border);
+  z-index: 1000;
+  transition: background-color var(--transition-base), border-color var(--transition-base);
+}
+
+html.dark .navbar {
+  background-color: rgba(15, 23, 42, 0.95);
+}
+
+/* Container Navbar */
+.navbar__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+/* Logo */
+.navbar__logo {
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  color: var(--color-primary);
+  text-decoration: none;
+  letter-spacing: -0.02em;
+  z-index: 1001;
+  transition: color var(--transition-fast);
+}
+
+html.dark .navbar__logo {
+  color: var(--color-text);
+}
+
+.navbar__logo:hover {
+  color: var(--color-accent);
+}
+
+/* Menu Desktop */
+.navbar__menu {
+  display: flex;
+  list-style: none;
+  gap: var(--space-6);
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.navbar__link {
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+  position: relative;
+  padding: var(--space-2) 0;
+}
+
+.navbar__link:hover,
+.navbar__link.active {
+  color: var(--color-accent);
+}
+
+/* Efek underline saat hover */
+.navbar__link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-accent);
+  transition: width var(--transition-base);
+}
+
+.navbar__link:hover::after,
+.navbar__link.active::after {
+  width: 100%;
+}
+
+/* Actions Container (Dark Mode + Hamburger) */
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  z-index: 1001;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.theme-toggle:hover {
+  background-color: var(--color-border);
+  border-color: var(--color-accent);
+  transform: translateY(-1px);
+}
+
+.theme-toggle svg {
+  width: 20px;
+  height: 20px;
+}
+
+.theme-toggle .sun-icon {
+  display: none;
+}
+
+.theme-toggle .moon-icon {
+  display: block;
+}
+
+html.dark .theme-toggle .sun-icon {
+  display: block;
+}
+
+html.dark .theme-toggle .moon-icon {
+  display: none;
+}
+
+/* Hamburger Toggle Button (Hidden di Desktop) */
+.navbar__toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  gap: 5px;
+  transition: all var(--transition-fast);
+}
+
+.navbar__toggle:hover {
+  background-color: var(--color-border);
+}
+
+.navbar__toggle-bar {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background-color: var(--color-text);
+  border-radius: 2px;
+  transition: all var(--transition-base);
+}
+
+/* Animasi Hamburger saat Active */
+.navbar__toggle.active .navbar__toggle-bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.navbar__toggle.active .navbar__toggle-bar:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.navbar__toggle.active .navbar__toggle-bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ===================================
+   MOBILE RESPONSIVE (Max 768px)
+   =================================== */
+@media (max-width: 768px) {
+  .navbar__toggle {
+    display: flex; /* Munculkan hamburger di mobile */
+  }
+  
+  .navbar__menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: calc(100vh - var(--navbar-height));
+    height: calc(100dvh - var(--navbar-height));
+    background-color: var(--color-bg);
+    flex-direction: column;
+    gap: 0;
+    padding: var(--space-6) var(--container-padding);
+    border-top: 1px solid var(--color-border);
+    transform: translateX(100%); /* Sembunyi di kanan layar */
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-base);
+    overflow-y: auto;
+    z-index: 999; /* Lebih kecil dari navbar (1000) */
+  }
+  
+  html.dark .navbar__menu {
+    background-color: var(--color-bg);
+  }
+  
+  /* Class .active ditambahkan oleh JavaScript saat diklik */
+  .navbar__menu.active {
+    transform: translateX(0); /* Muncul ke layar */
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .navbar__link {
+    display: block;
+    padding: var(--space-4) 0;
+    font-size: var(--text-lg);
+    color: var(--color-text);
+    border-bottom: 1px solid var(--color-border);
+  }
+  
+  /* Hilangkan underline di mobile */
+  .navbar__link::after {
+    display: none;
+  }
+  
+  .navbar__link:hover,
+  .navbar__link.active {
+    color: var(--color-accent);
+    background-color: transparent;
+  }
+  
+  /* Hilangkan border pada item terakhir */
+  .navbar__menu li:last-child .navbar__link {
+    border-bottom: none;
+  }
+}

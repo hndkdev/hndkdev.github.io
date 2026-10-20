@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Handika - Informatics Engineering Student & Developer with project experience in web development, REST APIs, NLP, and game development.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="MyPortfolio">
+  <meta property="og:description"
+    content="Aspriring Software Developer. Building web applications, REST APIs, and AI/NLP tools.">
+  <meta property="og:type" content="website">
+  <title>hndkdev | MyPortfolio</title>
+
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/img/favicon/site.webmanifest">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- Component CSS -->
+  <link rel="stylesheet" href="css/components/navbar.css">
+  <link rel="stylesheet" href="css/components/hero.css">
+  <link rel="stylesheet" href="css/components/about.css">
+  <link rel="stylesheet" href="css/components/skills.css">
+  <link rel="stylesheet" href="css/components/projects.css">
+  <link rel="stylesheet" href="css/components/education.css">
+  <link rel="stylesheet" href="css/components/contact.css">
+  <link rel="stylesheet" href="css/components/footer.css">
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="navbar__container">
+      <!-- Logo -->
+      <a href="index.html#hero" class="navbar__logo">hndkdev</a>
+
+      <!-- Menu (WAJIB ada id="navbar-menu") -->
+      <ul class="navbar__menu" id="navbar-menu">
+        <li><a href="index.html#about" class="navbar__link">About</a></li>
+        <li><a href="index.html#skills" class="navbar__link">Skills</a></li>
+        <li><a href="index.html#projects" class="navbar__link">Projects</a></li>
+        <li><a href="index.html#education" class="navbar__link">Education</a></li>
+        <li><a href="index.html#contact" class="navbar__link">Contact</a></li>
+      </ul>
+
+      <!-- Actions (Dark Mode + Hamburger) -->
+      <div class="navbar__actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <button type="button" class="navbar__toggle" id="navbar-toggle" aria-label="Toggle Menu"
+          aria-controls="navbar-menu" aria-expanded="false">
+          <span class="navbar__toggle-bar"></span>
+          <span class="navbar__toggle-bar"></span>
+          <span class="navbar__toggle-bar"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ==============================
+       MAIN CONTENT
+       ============================== -->
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="container">
+        <div class="hero__content">
+          <span class="hero__label">Aspriring Software Developer</span>
+          <h1 class="hero__title">
+            Membangun aplikasi dan proyek perangkat lunak melalui teknologi web, NLP, dan game development.
+          </h1>
+
+          <p class="hero__description">
+            Fresh graduate Teknik Informatika dengan pengalaman mengembangkan proyek
+            web, REST API, NLP, dan game edukasi. Saat ini terbuka terhadap peluang
+            sebagai junior developer.
+          </p>
+          <div class="hero__actions">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="https://github.com/hndkdev" target="_blank" rel="noopener noreferrer"
+              class="btn btn-secondary">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about section" id="about">
+      <div class="container">
+        <div class="about__content">
+          <div class="about__text">
+            <h2>About Me</h2>
+            <p>
+              Saya merupakan lulusan Teknik Informatika dari Universitas Cendekia Abditama yang telah menyelesaikan
+              seluruh persyaratan akademik. Saya memiliki minat pada pengembangan perangkat lunak dan aplikasi berbasis
+              web, dengan pengalaman mengembangkan beberapa proyek, seperti aplikasi web, REST API, penerapan Natural
+              Language Processing (NLP), dan game edukasi.
+              <br>
+              Saya terbiasa menggunakan Python, PHP, JavaScript, HTML, dan CSS, serta berbagai framework dan tools
+              sesuai kebutuhan proyek. Melalui proyek akademik, kegiatan pengabdian masyarakat, dan pengembangan
+              mandiri, saya terus mengembangkan keterampilan dalam membangun aplikasi dan menerapkan solusi teknologi.
+              Saat ini, saya terbuka terhadap kesempatan untuk memulai karier di bidang software dan web development,
+              khususnya pada posisi junior developer.
+            </p>
+            <a href="#contact" class="btn btn-secondary">Let's Connect</a>
+          </div>
+          <div class="about__image">
+            <!-- Pastikan file ini ada di folder assets/img/ -->
+            <img src="assets/img/profile2.webp" alt="Foto profil Dika"
+              style="width:100%; height:100%; object-fit:cover; border-radius:var(--radius-lg);">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="skills section section-alt" id="skills">
+      <div class="container">
+        <h2>Technical Skills</h2>
+        <div class="skills__grid">
+
+          <div class="skills__category">
+            <h3>Languages</h3>
+            <ul class="skills__list">
+              <li class="skill-tag">Python</li>
+              <li class="skill-tag">PHP</li>
+              <li class="skill-tag">JavaScript</li>
+              <li class="skill-tag">HTML</li>
+              <li class="skill-tag">CSS</li>
+            </ul>
+          </div>
+
+          <div class="skills__category">
+            <h3>Web Development</h3>
+            <ul class="skills__list">
+              <li class="skill-tag">FastAPI</li>
+              <li class="skill-tag">Flask</li>
+              <li class="skill-tag">Laravel</li>
+              <li class="skill-tag">Bootstrap</li>
+              <li class="skill-tag">Tailwind CSS</li>
+              <li class="skill-tag">REST API</li>
+            </ul>
+          </div>
+
+          <div class="skills__category">
+            <h3>Game Development</h3>
+            <ul class="skills__list">
+              <li class="skill-tag">GDevelop</li>
+              <li class="skill-tag">html5</li>
+            </ul>
+          </div>
+
+          <div class="skills__category">
+            <h3>AI / Machine Learning</h3>
+            <ul class="skills__list">
+              <li class="skill-tag">NLP</li>
+              <li class="skill-tag">Scikit-learn</li>
+              <li class="skill-tag">TF-IDF</li>
+              <li class="skill-tag">SVM</li>
+              <li class="skill-tag">Sastrawi</li>
+            </ul>
+          </div>
+
+          <div class="skills__category">
+            <h3>Database & Tools</h3>
+            <ul class="skills__list">
+              <li class="skill-tag">MySQL</li>
+              <li class="skill-tag">SQLite</li>
+              <li class="skill-tag">SQLAlchemy</li>
+              <li class="skill-tag">GitHub</li>
+              <li class="skill-tag">VS Code</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="projects section" id="projects">
+      <div class="container">
+        <div class="projects__header">
+          <h2>Featured Projects</h2>
+          <p>Beberapa proyek yang menunjukkan kemampuan saya dalam web development, AI/NLP, dan game development.</p>
+        </div>
+
+        <div class="projects__grid">
+
+          <!-- Project 1: Smart Task Manager -->
+          <article class="project-card">
+            <img src="assets/img/Screenshot Halaman Logo.webp" alt="Screenshot Smart Task Manager"
+              class="project-card__image" loading="lazy">
+            <div class="project-card__body">
+              <span class="project-card__category">Web App / AI / NLP</span>
+              <h3 class="project-card__title">Smart Task Manager</h3>
+              <p class="project-card__desc">
+                Aplikasi web untuk membantu pengelolaan tugas akademik mahasiswa dengan
+                mengklasifikasikan kategori dan tingkat prioritas tugas berdasarkan deskripsi teks.
+                Sistem menggunakan NLP, TF-IDF, dan SVM yang diintegrasikan melalui REST API berbasis FastAPI.
+              </p>
+              <div class="project-card__tech">
+                <span>Python</span>
+                <span>FastAPI</span>
+                <span>Scikit-learn</span>
+                <span>TF-IDF</span>
+                <span>SVM</span>
+                <span>SQLite</span>
+              </div>
+              <div class="project-card__links">
+                <a href="project.html?project=smart-task-manager" target="_blank" rel="noopener noreferrer"
+                  class="project-card__link">View Details</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Petualangan Kuis Budi -->
+          <article class="project-card">
+            <img src="assets/img/proj-kuis-budi.png" alt="Screenshot Petualangan Kuis Budi" class="project-card__image"
+              loading="lazy">
+            <div class="project-card__body">
+              <span class="project-card__category">Educational Game</span>
+              <h3 class="project-card__title">Petualangan Kuis Budi</h3>
+              <p class="project-card__desc">
+                Game edukasi berbasis petualangan yang menggabungkan eksplorasi dengan kuis pembelajaran
+                untuk siswa sekolah dasar. Dikembangkan menggunakan GDevelop 5 dan ditujukan sebagai
+                media pembelajaran interaktif berbasis HTML5.
+              </p>
+              <div class="project-card__tech">
+                <span>GDevelop 5</span>
+                <span>HTML5</span>
+              </div>
+              <div class="project-card__links">
+                <a href="project.html?project=kuis-budi" target="_blank" rel="noopener noreferrer"
+                  class="project-card__link">View Details</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: SIPADUKA -->
+          <article class="project-card">
+            <img src="assets/img/proj-sipaduka.jpg" alt="Screenshot SIPADUKA" class="project-card__image"
+              loading="lazy">
+            <div class="project-card__body">
+              <span class="project-card__category">Web App / API Integration</span>
+              <h3 class="project-card__title">SIPADUKA</h3>
+              <p class="project-card__desc">
+                Aplikasi web untuk mendukung pendataan penduduk dan keluarga di Kelurahan Panunggangan Barat.
+                Sistem menyediakan pengelolaan, pencarian, dan pembaruan data kependudukan dengan integrasi
+                Laravel, Google Apps Script, Google Sheets, dan Fonte API.
+              </p>
+              <div class="project-card__tech">
+                <span>Laravel</span>
+                <span>Google Apps Script</span>
+                <span>Google Sheets</span>
+                <span>Fonte API</span>
+              </div>
+              <div class="project-card__links">
+                <a href="project.html?project=sipaduka" target="_blank" rel="noopener noreferrer"
+                  class="project-card__link">View Details</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: YaumiApp -->
+          <article class="project-card">
+            <img src="assets/img/proj-yaumiapp.webp" alt="Screenshot YaumiApp" class="project-card__image"
+              loading="lazy">
+            <div class="project-card__body">
+              <span class="project-card__category">Web Application</span>
+              <h3 class="project-card__title">YaumiApp</h3>
+              <p class="project-card__desc">
+                Aplikasi web pendamping ibadah harian yang membantu pengguna mencatat dan memantau amal yaumiyah
+                melalui checklist, riwayat ibadah, manajemen profil, serta jadwal sholat dan pengingat waktu sholat.
+              </p>
+              <div class="project-card__tech">
+                <span>PHP</span>
+                <span>MySQL</span>
+                <span>Bootstrap</span>
+                <span>JavaScript</span>
+              </div>
+              <div class="project-card__links">
+                <a href="project.html?project=yaumiapp" target="_blank" rel="noopener noreferrer"
+                  class="project-card__link">View Details</a>
+              </div>
+            </div>
+          </article>
+
+        </div> <!-- End of projects__grid -->
+      </div> <!-- End of container -->
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="education section section-alt" id="education">
+      <div class="container">
+        <div class="education__content">
+          <h2>Education</h2>
+          <div class="education__item">
+            <h3 class="education__degree">Teknik Informatika</h3>
+            <p class="education__school">Universitas Cendekia Abditama</p>
+            <span class="education__year">2022 - 2026</span>
+          </div>
+          <div class="education__item">
+            <h3 class="education__degree">Ilmu Pengetahuan Sosial</h3>
+            <p class="education__school">SMAN 5 Kota Tangerang</p>
+            <span class="education__year">2019 - 2022</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact section" id="contact">
+      <div class="container">
+        <div class="contact__content">
+          <h2>Let's Connect</h2>
+          <p>
+            I'm open to internship and junior developer opportunities. Feel free to reach out if you'd like to
+            collaborate or discuss a project.
+          </p>
+          <div class="contact__links">
+            <a href="mailto:email-anda@gmail.com" class="contact__link">Email</a>
+            <a href="https://linkedin.com/in/muhamad-handika-mawardi-69692132a" target="_blank"
+              rel="noopener noreferrer" class="contact__link">LinkedIn</a>
+              <a href="https://github.com/hndkdev" target="_blank" rel="noopener noreferrer"
+              class="contact__link">GitHub</a>
+              <a href="https://instagram.com/hndkdev" target="_blank" rel="noopener noreferrer"
+              class="contact__link">instagram</a>
+          </div>
+          <a href="assets/cv-dika.pdf" download class="btn btn-primary">Download CV</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==============================
+       FOOTER
+       ============================== -->
+  <footer class="footer">
+    <div class="container">
+      <span class="footer__copy">&copy; <span id="tahun"></span> hndkdev. All rights reserved.</span>
+      <script>
+        document.getElementById("tahun").textContent = new Date().getFullYear();
+      </script>
+      <div class="footer__links">
+        <a href="https://github.com/hndkdev" target="_blank" rel="noopener noreferrer" class="footer__link">GitHub</a>
+        <a href="https://instagram.com/hndkdev" target="_blank" rel="noopener noreferrer" class="footer__link">instagram</a>
+        <a href="https://linkedin.com/in/muhamad-handika-mawardi-69692132a" target="_blank" rel="noopener noreferrer"
+          class="footer__link">LinkedIn</a>
+        <a href="mailto:muh.handika.m@gmail.com" class="footer__link">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

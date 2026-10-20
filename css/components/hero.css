@@ -1,0 +1,97 @@
+/* ===================================
+   HERO SECTION
+   =================================== */
+.hero {
+  padding: var(--space-24) 0; /* Ruang vertikal yang sangat lega */
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero__content {
+  max-width: 800px; /* Batasi lebar teks agar mudah dibaca */
+}
+
+.hero__label {
+  display: inline-block;
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  color: var(--color-accent);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-4);
+}
+
+.hero__title {
+  font-size: var(--text-4xl);
+  font-weight: var(--font-bold);
+  color: var(--color-primary);
+  line-height: 1.1; /* Line height ketat untuk heading besar */
+  letter-spacing: -0.03em;
+  margin-bottom: var(--space-6);
+}
+
+.hero__description {
+  font-size: var(--text-lg);
+  color: var(--color-text-muted);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-10);
+  max-width: 600px;
+}
+
+.hero__actions {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-3) var(--space-6);
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background-color: var(--color-accent);
+  color: #ffffff;
+  border: 1px solid var(--color-accent);
+  /* Penting: Tambahkan transisi agar efek hover halus */
+  transition: all var(--transition-fast); 
+}
+
+.btn-primary:hover {
+  color: #ffffff;
+  background-color: var(--color-accent-hover); /* PERBAIKAN: Warna berubah lebih gelap */
+  border-color: var(--color-accent-hover);
+  transform: translateY(-3px); 
+  box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent); /* PERBAIKAN: Tambahkan border solid */
+  transition: all var(--transition-fast);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-accent); /* PERBAIKAN: Background jadi oranye */
+  color: #ffffff; /* PERBAIKAN: Teks jadi putih agar kontras dan terbaca */
+  border-color: var(--color-accent);
+}
+
+/* Responsive Typography */
+@media (min-width: 768px) {
+  .hero__title {
+    font-size: var(--text-5xl); /* 48px di desktop */
+  }
+}

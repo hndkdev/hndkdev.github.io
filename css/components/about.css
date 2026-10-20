@@ -1,0 +1,39 @@
+/* ===================================
+   ABOUT SECTION
+   =================================== */
+.about__content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-12);
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .about__content {
+    grid-template-columns: 1fr 1fr; /* Split layout di desktop */
+  }
+}
+
+.about__text h2 {
+  margin-bottom: var(--space-6);
+}
+
+.about__text p {
+  font-size: var(--text-lg);
+  color: var(--color-text-muted);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-6);
+}
+
+/* Jika nanti ada foto profil */
+.about__image {
+  width: 80%;
+  height: 300px;
+  background-color: var(--color-bg-alt); /* Placeholder warna abu-abu */
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
