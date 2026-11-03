@@ -148,7 +148,7 @@ const projectData = {
     role: "",
     resultTitle: "Status",
     result: "Aplikasi masih dalam tahap pengembangan. Beberapa fitur belum selesai dan masih terdapat bug yang perlu diperbaiki.",
-    demo: "https://aplikasi-mutabaah.page.gd/",
+    demo: "https://yaumiapp.freedev.app/",
     github: "",
     gallery: [
         { src: "assets/img/Halaman-Login-YaumiApp.webp", alt: "Halaman Login YaumiApp", isFull: true},
