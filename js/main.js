@@ -131,7 +131,7 @@ const projectData = {
     resultTitle: "Project Context",
     result: "SIPADUKA dikembangkan sebagai sistem berbasis web untuk mendukung proses pendataan penduduk dan keluarga di Kelurahan Panunggangan Barat.",
     demo: "",
-    github: "",
+    github: "https://github.com/hndkdev/sipaduka-portfolio",
     gallery: [
         { src: "assets/img/dashboard-sipaduka.webp", alt: "Halaman Dashboard SIPADUKA",isFull: true },
         { src: "assets/img/tampilan-data-penduduk.webp", alt: "Halaman data penduduk"},
